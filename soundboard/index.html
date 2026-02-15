@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Soundboard</title>
+
+  <!-- Fonts and Styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Headings -->
+  <h2>Mocha Soundboard</h2>
+  <h3>Ma, there's a weird f-ing cat outside!</h3>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Audio bits! -->
+
+  <!-- goobahx4 -->
+  <audio id="goobahx4" src="./soundboard-audio/goobahx4.mp3"></audio>
+  <button class="sound-btn" onclick="play('goobahx4', this)">
+    <span class="label">Goobah</span>
+    <span class="progress"></span>
+  </button>
+
+  <!-- veryfunny -->
+  <audio id="veryfunny" src="./soundboard-audio/veryfunny.mp3"></audio>
+  <button class="sound-btn" onclick="play('veryfunny', this)">
+    <span class="label">Very funny</span>
+    <span class="progress"></span>
+  </button>
+
+  <script src="./scripts.js"></script>
+
+</body>
+
+</html>

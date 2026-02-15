@@ -1,0 +1,90 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Lato, Arial, sans-serif;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/background-image.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.beverages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.beverage {
+    position: absolute;
+    width: 100px;
+    /* adjust as needed */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover effect: white fuzzy border */
+.beverage:hover {
+    box-shadow: 0 0 10px 5px white;
+    transform: scale(1.05);
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #2196f3;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#menu {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+.hidden {
+    display: none;
+}
+
+.menu-left,
+.menu-right {
+    width: 45%;
+}
+
+#menu-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
