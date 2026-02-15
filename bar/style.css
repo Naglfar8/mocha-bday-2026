@@ -88,3 +88,11 @@ button {
     display: block;
     margin: 10px 0;
 }
+
+#phaser-container {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
