@@ -22,12 +22,12 @@ const config = {
   height: 1080,
   backgroundColor: 0xffffff,
   parent: "phaser-container",
-  resolution: window.devicePixelRatio,
+  resolution: 1,
   scene: { preload, create },
   powerPreference: "high-performance",
   fps: {
     target: 30,
-    smoothStep: true
+    smoothStep: true,
     forceSetTimeOut: true
   }
 };
