@@ -3,7 +3,7 @@
 // =====================================================
 
 const beveragesData = [
-  { name: "1.5 goob", creator: "Goob!", image: "images/goobs/drink0.png", description: "Tasty drink", ingredients: "Water, Sugar", flavor: "Sweet", xy: { x: 90, y: -300 } },
+  { name: "1.5 goob", creator: "Goob!", image: "images/goobs/drink0.png", description: "Tasty drink", ingredients: "-wah", flavor: "a little sweet", xy: { x: 90, y: -300 } },
   { name: "2.0 goob", creator: "goob goob", image: "images/goobs/drink1.png", description: "a little bit of bitter and sweet", ingredients: "-goobism\n-coffee\n-( ・∇・)", flavor: "a goofy little guy", xy: { x: -20, y: -300 } },
   { name: "hai", creator: "car enjoyer", image: "images/goobs/drink2.png", description: "if i fits i sits", ingredients: "moga", flavor: "despite being coffee, will make you eepy", xy: { x: 250, y: -300 } }
 ];
@@ -17,13 +17,18 @@ let currentMenuIndex = -1; // start page
 // =====================================================
 
 const config = {
-  type: Phaser.AUTO,
+  type: Phaser.WEBGL,
   width: 1920,
   height: 1080,
   backgroundColor: 0xffffff,
   parent: "phaser-container",
-  resolution: window.devicePixelRatio,
-  scene: { preload, create }
+  scene: { preload, create },
+  powerPreference: "high-performance",
+  fps: {
+    target: 30,
+    smoothStep: true,
+    forceSetTimeOut: true
+  }
 };
 
 new Phaser.Game(config);
