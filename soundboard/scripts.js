@@ -1,24 +1,42 @@
+let currentAudio = null;
+let currentBar = null;
+
 function play(id, button) {
-  const audio = document.getElementById(id); // Get audio file by id
-  const bar = button.querySelector('.progress'); // Scrolling bar to display audio playback progress
+  const audio = document.getElementById(id);
+  const bar = button.querySelector('.progress');
+
+  if (currentAudio && currentAudio !== audio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+
+    if (currentBar) {
+      currentBar.style.width = '0%';
+    }
+  }
+
+  currentAudio = audio;
+  currentBar = bar;
 
   audio.currentTime = 0;
-  audio.play(); // Play audio file
+  audio.play();
   bar.style.transition = 'width 0.05s linear';
 
-  function update() { // Updates bar width
+  function update() {
     if (!audio.duration) {
       requestAnimationFrame(update);
       return;
     }
 
     const percent = (audio.currentTime / audio.duration) * 100;
-    bar.style.width = percent + '%'; // Width
+    bar.style.width = percent + '%';
 
-    if (percent >= 100 || audio.ended) { // Reset audio bar
+    if (percent >= 100 || audio.ended) {
       bar.style.width = '0%';
       audio.pause();
       audio.currentTime = 0;
+
+      currentAudio = null;
+      currentBar = null;
       return;
     }
 
