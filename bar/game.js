@@ -30,7 +30,7 @@ const beveragesData = [
 
   { name: "Hoppy Root Beer Float", creator: "Hopper", image: "images/goobs/drink16.png", description: "A root beer float so good it’ll make you hop all over the place", ingredients: "- Root Beer\n- Vanilla Ice Cream\n- Cinnamon", flavor: "Hopefully the ice cream at the bottom is evident enough and not confusing", size: 90, xy: { x: 330, y: -40 } },
 
-  { name: "Badtcha Frappe", creator: "Riatsila", image: "images/goobs/drink27.png", description: "Earthy matcha flavors, not super sweet, just enough to take off the bitterness...but an aftertaste of \"how old is this?\"", ingredients: "Out of date matcha powder\n- Ice\n- Blending base (only added sweetness)\n- Oat milk\n- Whipped cream.", flavor: "Fairly normal ingredients, except the age of the matcha and the time between making to drinking. Mix and blend like normal, but freeze it to save for later, forget about it overnight, Let it mostly thaw out, and a lot of the matcha settles to the bottom. It's okay, but not too fresh.", size: 90, xy: { x: -210, y: -35 } },
+  { name: "Badtcha Frappe", creator: "Riatsila", image: "images/goobs/drink27.png", description: "Earthy matcha flavors, not super sweet, just enough to take off the bitterness...but an aftertaste of \"how old is this?\"", ingredients: "- Out of date matcha powder\n- Ice\n- Blending base (only added sweetness)\n- Oat milk\n- Whipped cream.", flavor: "Fairly normal ingredients, except the age of the matcha and the time between making to drinking. Mix and blend like normal, but freeze it to save for later, forget about it overnight, Let it mostly thaw out, and a lot of the matcha settles to the bottom. It's okay, but not too fresh.", size: 90, xy: { x: -210, y: -35 } },
 
   { name: "Apex Special", creator: "Goobert", image: "images/goobs/drink9.png", description: "The perfect cup for the perfect lap", ingredients: "- Finely Ground Coffee Beans\n- Coffee Oil\n- Whatever Falls In While\n  Under A Car", flavor: "This gooba is both track side mechanic and a professional driver. (he thinks he's both, despite not going to school... and his feet can't reach the pedals, but we like seeing him smile)", size: 90, xy: { x: -285, y: -20 } },
 
@@ -686,7 +686,7 @@ function create() {
       ingredientsTitle.setText("Ingredients");
       ingredientsText.setText(data.ingredients);
       ingredientsText.setFontSize(24);
-      while (ingredientsText.height > 200 && parseInt(ingredientsText.style.fontSize) > 18) {
+      while (ingredientsText.height > 150 && parseInt(ingredientsText.style.fontSize) > 18) {
         ingredientsText.setFontSize(parseInt(ingredientsText.style.fontSize) - 2);
       }
 
