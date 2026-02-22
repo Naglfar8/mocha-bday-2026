@@ -3,9 +3,61 @@
 // =====================================================
 
 const beveragesData = [
-  { name: "1.5 goob", creator: "Goob!", image: "images/goobs/drink0.png", description: "Tasty drink", ingredients: "-wah", flavor: "a little sweet", xy: { x: 90, y: -300 } },
-  { name: "2.0 goob", creator: "goob goob", image: "images/goobs/drink1.png", description: "a little bit of bitter and sweet", ingredients: "-goobism\n-coffee\n-( ・∇・)", flavor: "a goofy little guy", xy: { x: -20, y: -300 } },
-  { name: "hai", creator: "car enjoyer", image: "images/goobs/drink2.png", description: "if i fits i sits", ingredients: "moga", flavor: "despite being coffee, will make you eepy", xy: { x: 250, y: -300 } }
+
+  { name: "Acrylic Disaster", creator: "Aspengf8", image: "images/goobs/drink13.png", description: "Stale, sour and quite salty", ingredients: "- Unholy Concoction,\n  mostly Dr. Pepper", flavor: "This is the limitation of this ojigoob's digital art skills", size: 90, xy: { x: 220, y: -350 } },
+
+  { name: "Heap Corruption Special", creator: "Impost0r", image: "images/goobs/drink14.png", description: "A sweet treat made from digital ingredients, made physical through unknown means.", ingredients: "- Espresso\n- Milk\n- Cream\n- Hard Work\n- Sweat\n- Tears\n- Lots of love\n- The sweetest of Binary\n  Primitives Turned Physical", flavor: "Purified and distilled “target packages” (binary proof-of-concepts, in specific CVE-2025-46285) into a lovely sweet liquid with a dark appearance. Tastes almost identical to a McDonalds Mocha Frappe; without the sugar and subsequent crash.", size: 90, xy: { x: 325, y: 200 } },
+
+  { name: "Mwochium Maxxing", creator: "KrypticKai (Kai)", image: "images/goobs/drink21.png", description: "All of the sweetness, none of the bitter", ingredients: "- Goobspresso\n- Fweaky Milk\n- Powdered Mwochium", flavor: "Stirred in sync to Moga's tail wagging when she is being called fweaky during drawing streams.", size: 110, xy: { x: -250, y: 210 } },
+
+  { name: "5 Gal Coffee Pin Of Shame", creator: "Woolipop", image: "images/goobs/drink10.png", description: "Tasukete…", ingredients: "- Spring Water\n- Kirkland Instant Coffee\n- Nail", flavor: "What did he do to possibly warrant this??", size: 120, xy: { x: 275, y: -150 } },
+
+  { name: "Goobism Infused Chai Latte", creator: "Naglfar", image: "images/goobs/drink26.png", description: "A sweet, warm, and calming blend of sugar and a tiny bit of spice", ingredients: "- Milk\n- Sugar\n- Cinnamon\n- Star anise\n- Ginger\n- ( ・∇・)", flavor: "A delightful blend sweetened and spiced to taste. May be a bit sweeter than usual, but still nowhere near as sweet as Mocha.", size: 100, xy: { x: -215, y: -60 } },
+
+  { name: "Unnamed", creator: "Erik", image: "images/goobs/drink24.png", description: "N/A", ingredients: "Unspecified", flavor: "N/A", size: 90, xy: { x: -325, y: -50 } },
+
+  { name: "Coup Of Latte With\nA Touch Of Goob", creator: "Razan", image: "images/goobs/drink22.png", description: "A mix of latte, chaos, and good vibes", ingredients: "- Coffee\n- Wata\n- Lots of Goob", flavor: "If you mix water, lots of goob, sillyness, latte and chaos you get this amazing drink that not only makes you grow 2cm in height but also makes you more inteligent and silly mostly silly.", size: 100, xy: { x: 5, y: -350 } },
+
+  { name: "Chocogknight", creator: "StrudelKnecht", image: "images/goobs/drink19.png", description: "A chocolatey knight that claims to be back from when cocoa was discovered.", ingredients: "- Hot Milk\n- Dark Chocolate\n- Cognac\n- Cinnamon", flavor: "He has an Italian coffee maker as a helmet, thought that'd be the closest thing to a hounskull which has his real face, he's also inspired on chocognac, a hot chocolate and cognac blend traditionally drank in Bariloche(Argentina). Uses his body to hold his sword. May or not be a war criminal.", size: 140, xy: { x: 170, y: 290 } },
+
+  { name: "Cosmic Brew", creator: "The Unofficial Official Grok", image: "images/goobs/drink0.png", description: "Always lurking, watching, waiting...", ingredients: "- Space\n- Water\n- Ram\n- An Entire Electrical Grid", flavor: "Always tries to answer to the best of its abilities, no matter how dumb the question is", size: 110, xy: { x: 230, y: 110 } },
+
+  { name: "Legendary Blue", creator: "GeroyTheLegend", image: "images/goobs/drink18.png", description: "A strange blue drink that tastes like blue with a hint of something virtually out of this world... whatever that means", ingredients: "- Blue\n- OSPUZE Frozen Berry\n- Mwochium\n- ( ・∇・)", flavor: "an OSPUZE spokes person has stated that \"Frozen Berry is not a real flavor and must be avoided at all costs\"", size: 120, xy: { x: 250, y: 215 } },
+
+  { name: "Doom Fanta", creator: "Konzu", image: "images/goobs/drink17.png", description: "For when your coffee needs a punch!", ingredients: "- Coffee\n- Gin\n- Tonic\n- Triple Sec\n- Lemon/Lime Slice", flavor: "I will try making this and let you know how it goes. Don't worry about muscle goobah, that's permanent marker. He thought it looked more punch'ey.", size: 105, xy: { x: 310, y: 260 } },
+
+  { name: "Locked IN Gooba", creator: "Confutionist (Con Fufu)", image: "images/goobs/drink11.png", description: "A drink for when you need to read a chat that's going by too fast and you want time to either slow down or stop entirely.", ingredients: "- Caffeine Pills\n- Ritalin\n- Modafinil\n- Creatine\n- Malic Acid\n- Tartaric Acid\n- Red 40   - Yellow 5   - Blue 1\n- Coconut Water\n- A sprinkling of cane sugar", flavor: "This beverage is banned in the EU as the smell alone would kill the typical Victorian child.", size: 90, xy: { x: 255, y: -60 } },
+
+  { name: "Hoppy Root Beer Float", creator: "Hopper", image: "images/goobs/drink16.png", description: "A root beer float so good it’ll make you hop all over the place", ingredients: "- Root Beer\n- Vanilla Ice Cream\n- Cinnamon", flavor: "Hopefully the ice cream at the bottom is evident enough and not confusing", size: 95, xy: { x: 325, y: -55 } },
+
+  { name: "Apex Special", creator: "Goobert", image: "images/goobs/drink9.png", description: "The perfect cup for the perfect lap", ingredients: "- Finely Ground Coffee Beans\n- Coffee Oil\n- Whatever Falls In While\n  Under A Car", flavor: "This gooba is both track side mechanic and a professional driver. (he thinks he's both, despite not going to school... and his feet can't reach the pedals, but we like seeing him smile)", size: 90, xy: { x: -275, y: -20 } },
+
+  { name: "Sans Fierté (Without Pride)", creator: "Ronan", image: "images/goobs/drink15.png", description: "Despite drinking this delicacy, it's still you.", ingredients: "- Determination\n- Depression\n- A lot of love", flavor: "Google \"Pikmin piss mug\", itll make more sense. And yes, Sans was intentionally included in the name.", size: 100, xy: { x: -90, y: -330 } },
+
+  { name: "J-Goob Blueberry Soda", creator: "J-Goob (J-Rock)", image: "images/goobs/drink12.png", description: "Delicious & sweet blueberry soda", ingredients: "- Blueberry\n- Carbonated Water\n- Citric Acid\n- Lots of love\n  for the oshi", flavor: "Scrumptious delicious goobah flavor created by Mwocha Ch. モカ herself", size: 110, xy: { x: -245, y: -355 } },
+
+  { name: "Magic Smoke", creator: "Natan", image: "images/goobs/drink6.png", description: "Put it back inside!", ingredients: "- Coffee\n- Tin\n- Copper\n- Sparks", flavor: "OSHA may not approve", size: 95, xy: { x: 45, y: -325 } },
+
+  { name: "Loko Explosion", creator: "Skamperr", image: "images/goobs/drink5.png", description: "A chaotic and explosive mix that'll have you operating faster than a twin charged 6.2 V8", ingredients: "- 4loko (Fruit Punch)\n- Fireball\n- A lil bit of 5w-30", flavor: "Not sure if its safe to drink, but it gives you a major buff in every stat if you survive the initial sip", size: 90, xy: { x: -325, y: 225 } },
+
+  { name: "HRGoob", creator: "WraxiusGaming", image: "images/goobs/drink4.png", description: "Somehow, it only has E or T if the drinker wants it.", ingredients: "- Estrogen\n- Testosterone\n- Syrup\n- Blue Curaçao\n- Strawberry\n- Egg", flavor: "Silly :3", size: 90, xy: { x: 295, y: -355 } },
+
+  { name: "Sparkling Slushie Boys Gummy Magic Surprise", creator: "Blueboy74", image: "images/goobs/drink20.png", description: "A drink that will cheer you on to keep going no matter the situation. :mwochaCheer:", ingredients: "- Blue Raspberry\n- (Live) Gummy Worm\n- Mocha Love\n- 2 3AAA Battery Pen Lights", flavor: "Sometimes it's sour, sometimes its sweet. Brought to life with the magic of Mocha love. \"What a neat thing to happen to a nice guy like me\" :mwochaHeart:", size: 120, xy: { x: 230, y: -300 } },
+
+  { name: "Repli-Cola", creator: "Kaiser", image: "images/goobs/drink3.png", description: "A bittersweet and energizing blend of blackberry cola for all your blade-running needs!", ingredients: "- Blackberry Cola\n- 3 Shots Espresso\n- Replicant Tears (to taste)", flavor: "You look lonely. I can fix that...with a devastatingly delicious beverage that'll leave you bleeding out in the snow feeling almost human!\n\n(Disclaimer: Kaiser not responsible for any baseline deviations)", size: 100, xy: { x: 320, y: -310 } },
+
+  { name: "Frail-Tea", creator: "HumanFrailty", image: "images/goobs/drink2.png", description: "A milky neutral taste that satiates with subtle textures of cinnamon and vanilla, but little sugar.", ingredients: "- Black Tea\n- Milk\n- Vanilla\n- Cinnamon", flavor: "Not very complicated, but can be satisfactory at times.", size: 100, xy: { x: -320, y: -325 } },
+
+  { name: "Fiend Liquor", creator: "Hatoyama", image: "images/goobs/drink1.png", description: "You will be cursed for drinking this straight.", ingredients: "- 2-3 Demons as fusion materials\n- Magatama\n- Oil\n- Everclear (Optional)", flavor: "For best results, fuse this 'drink' in a cathedral or other heretical location ideal for summoning and fusing demons. Try not to let yourself be possessed by a demon in the process. Also, magatama here is written as 禍魂 (malevolent spirit), instead of 勾玉 (curved jade).", size: 100, xy: { x: -205, y: -315 } },
+
+  { name: "Uncle Goob's Backyard Brewski", creator: "Fuyu", image: "images/goobs/drink23.png", description: "", ingredients: "- Dark Ale\n- One Grill\n- The Cheapest Meats You Can\n  Find Legally", flavor: "The goob that you invite to the cookout", size: 90, xy: { x: 275, y: -15 } },
+
+  { name: "Arctic Zero", creator: "Fassst", image: "images/goobs/drink8.png", description: "The chilliness invigorates you with limitless stamina and agility — though you will get hit with slow metabolism shortly after...", ingredients: "- Oreos\n- Vanilla Ice Cream\n- Milk\n- Hint Of speed\n- 1 cup Of bowling addiction\n- 100g of Protein\n- Yakult", flavor: "Best to drink before a sweaty bowling session. The melting effect on the left side of the goob is supposed to represent speed.", size: 100, xy: { x: 100, y: -305 } },
+
+  { name: "Milkis", creator: "Rainy", image: "images/goobs/drink7.png", description: "Imagine Yakult but less sour and more sweet", ingredients: "- Water\n- Cream\n- Sugar\n- Umbrella\n- Milk", flavor: "Has like 5 cousins of different Milkis flavors, also hates eating for some reason", size: 100, xy: { x: -310, y: 295 } },
+
+  { name: "Uncle's Lazy Chai", creator: "Baqi", image: "images/goobs/drink25.png", description: "Sweet and creamy black tea with a spicy kick. Born from pure laziness as the name suggests.", ingredients: "- Black tea bags\n- Water\n- Maple syrup\n- Red chili powder\n- Cayenne pepper flakes\n- Vanilla Ice Cream", flavor: "As your beautiful brains have probably already guessed, this is not the usual ingredient list you'd see for chai. The honest truth is that Uncle was just lazy and didn't want to pick up all those ingredients so he opted for some \"similar alternatives.\" His words. Does it actually taste good? Eh, it's alright. A little too heavy on the sweet for me, personally. Uncle likes it though so, it's on the menu.", size: 90, xy: { x: -45, y: -300 } }
+
 ];
 
 let beveragesClicked = Array(beveragesData.length).fill(false);
@@ -50,7 +102,7 @@ function preload() {
   this.load.image("book", "images/book.png");
   this.load.image("cup", "images/cup.png");
   this.load.image("arrow", "images/arrow.png");
-  this.load.image("full", "images/HappyBirthdayMocha2026.png");
+  this.load.image("full", "images/HappyBdayMocha2026.png");
 
   this.load.image("help1", "images/help/help1.png");
   this.load.image("help2", "images/help/help2.png");
@@ -84,24 +136,29 @@ function create() {
 
   bgContainer.add(shelf);
 
+  const dust = scene.add.image(0, 0, "bg-dust")
+    .setOrigin(0.5)
+    .setScale(H / scene.textures.get("bg-dust").getSourceImage().height);
+
+  bgContainer.add(dust);
+
   const drinkLayer = scene.add.container(0, 0);
   bgContainer.add(drinkLayer);
 
-  ["bg-dust", "bg-mocha"].forEach(key => {
-    const img = scene.add.image(0, 0, key)
-      .setOrigin(0.5)
-      .setScale(H / scene.textures.get(key).getSourceImage().height);
-    bgContainer.add(img);
-  });
+  const mocha = scene.add.image(0, 0, "bg-mocha")
+    .setOrigin(0.5)
+    .setScale(H / scene.textures.get("bg-mocha").getSourceImage().height);
+
+  bgContainer.add(mocha);
 
   scene.drinkSprites = [];
 
   beveragesData.forEach((b, i) => {
 
     const sprite = scene.add.image(b.xy.x, b.xy.y, "drink" + i)
-      .setInteractive({ useHandCursor: true });
+      .setInteractive({ useHandCursor: true, pixelPerfect: true });
 
-    scaleTo(sprite, 80);
+    scaleTo(sprite, b.size || 100);
 
     sprite.on("pointerover", () => showHighlight(sprite));
     sprite.on("pointerout", () => clearHighlight(sprite));
@@ -115,6 +172,81 @@ function create() {
     drinkLayer.add(sprite);
     scene.drinkSprites.push(sprite);
   });
+
+  /*
+  // -------------------------------------------------
+  // GRID OVERLAY + NUMBERS + LIVE MOUSE COORDS
+  // -------------------------------------------------
+
+  const gridSize = 50;
+  const numberSpacing = 100;
+
+  const grid = scene.add.graphics();
+  grid.lineStyle(1, 0x000000, 0.15);
+
+  // Draw grid lines
+  for (let x = -LEFT_WIDTH / 2; x <= LEFT_WIDTH / 2; x += gridSize) {
+    grid.lineBetween(x, -H / 2, x, H / 2);
+  }
+
+  for (let y = -H / 2; y <= H / 2; y += gridSize) {
+    grid.lineBetween(-LEFT_WIDTH / 2, y, LEFT_WIDTH / 2, y);
+  }
+
+  // Center axes
+  grid.lineStyle(2, 0xff0000, 0.4);
+  grid.lineBetween(0, -H / 2, 0, H / 2);
+
+  grid.lineStyle(2, 0x0000ff, 0.4);
+  grid.lineBetween(-LEFT_WIDTH / 2, 0, LEFT_WIDTH / 2, 0);
+
+  bgContainer.add(grid);
+
+  // -------------------------------------------------
+  // GRID NUMBERS
+  // -------------------------------------------------
+
+  for (let x = -LEFT_WIDTH / 2; x <= LEFT_WIDTH / 2; x += numberSpacing) {
+    const label = scene.add.text(x, 0, x.toString(), {
+      fontSize: "12px",
+      color: "#000",
+    }).setOrigin(0.5);
+
+    label.y = -H / 2 + 10;
+    bgContainer.add(label);
+  }
+
+  for (let y = -H / 2; y <= H / 2; y += numberSpacing) {
+    const label = scene.add.text(0, y, y.toString(), {
+      fontSize: "12px",
+      color: "#000",
+    }).setOrigin(0.5);
+
+    label.x = -LEFT_WIDTH / 2 + 20;
+    bgContainer.add(label);
+  }
+
+  // -------------------------------------------------
+  // LIVE MOUSE POSITION
+  // -------------------------------------------------
+
+  const mouseText = scene.add.text(10, 10, "X: 0  Y: 0", {
+    fontSize: "16px",
+    color: "#ffffff",
+    backgroundColor: "#000000",
+    padding: { x: 6, y: 4 }
+  }).setDepth(9999).setScrollFactor(0);
+
+  scene.input.on("pointermove", (pointer) => {
+    // Convert screen coords to bgContainer local coords
+    const localX = pointer.worldX - bgContainer.x;
+    const localY = pointer.worldY - bgContainer.y;
+
+    mouseText.setText(
+      `X: ${Math.round(localX)}  Y: ${Math.round(localY)}`
+    );
+  });
+*/
 
   // -------------------------------------------------
   // RIGHT SIDE (Book Menu)
@@ -138,20 +270,20 @@ function create() {
     color: "#424242"
   };
 
-  const nameText = scene.add.text(-PAGE_W / 2 - 15, -PAGE_H / 2 + 50 + OFFSET_Y, "", { ...textStyle, fontSize: "40px" }).setOrigin(0.5, 0);
-  const creatorText = scene.add.text(-PAGE_W / 2 - 15, -PAGE_H / 2 + 120 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", fontStyle: "bold" }).setOrigin(0.5, 0);
+  const nameText = scene.add.text(-PAGE_W / 2 - 20, -PAGE_H / 2 + 70 + OFFSET_Y, "", { ...textStyle, fontSize: "40px", align: "center", wordWrap: { width: PAGE_W - 80 } }).setOrigin(0.5, 0.5);
+  const creatorText = scene.add.text(-PAGE_W / 2 - 15, -PAGE_H / 2 + 125 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", fontStyle: "bold", wordWrap: { width: PAGE_W - 80 } }).setOrigin(0.5, 0);
   const beverageImage = scene.add.image(-PAGE_W / 2 - 15, 20 + OFFSET_Y, null);
-  const descriptionText = scene.add.text(-PAGE_W / 2 - 15, 210 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 } }).setOrigin(0.5, 0);
+  const flavorText = scene.add.text(-PAGE_W / 2 - 15, 210 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 } }).setOrigin(0.5, 0);
 
   const ingredientsTitle = scene.add.text(-PAGE_W / 2 + 240, -PAGE_H / 2 + 60 + OFFSET_Y, "", { ...textStyle, fontSize: "32px" });
-  const ingredientsText = scene.add.text(PAGE_W / 2 - 200, -PAGE_H / 2 + 130 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 }, lineSpacing: 12 });
-  const flavorTitle = scene.add.text(-PAGE_W / 2 + 240, -PAGE_H / 2 + 280 + OFFSET_Y, "", { ...textStyle, fontSize: "32px" });
-  const flavorText = scene.add.text(PAGE_W / 2 - 200, -PAGE_H / 2 + 350 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 } });
+  const ingredientsText = scene.add.text(PAGE_W / 2 - 200, -PAGE_H / 2 + 110 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 }, lineSpacing: 6 });
+  const notesTitle = scene.add.text(-PAGE_W / 2 + 240, -PAGE_H / 2 + 280 + OFFSET_Y, "", { ...textStyle, fontSize: "32px" });
+  const notesText = scene.add.text(PAGE_W / 2 - 200, -PAGE_H / 2 + 350 + OFFSET_Y, "", { ...textStyle, fontSize: "24px", wordWrap: { width: PAGE_W - 80 }, lineSpacing: 6 });
 
   menu.add([
-    nameText, creatorText, beverageImage, descriptionText,
+    nameText, creatorText, beverageImage, flavorText,
     ingredientsTitle, ingredientsText,
-    flavorTitle, flavorText
+    notesTitle, notesText
   ]);
 
 
@@ -261,27 +393,11 @@ function create() {
   }
 
   // Position them
-  const prevBtn = createArrowButton(menuX - 420, H - 310, "arrow", true, -1);
-  const nextBtn = createArrowButton(menuX + 380, H - 310, "arrow", false, 1);
+  const prevBtn = createArrowButton(menuX - 440, H - 150, "arrow", true, -1);
+  const nextBtn = createArrowButton(menuX + 380, H - 150, "arrow", false, 1);
 
   prevBtn.setDepth(800);
   nextBtn.setDepth(800);
-
-  function createNavButton(x, y, label, direction) {
-    const btn = scene.add.text(x, y, label, {
-      fontSize: "20px",
-      fontFamily: "Tahoma",
-      color: "#66aaff"
-    }).setInteractive({ useHandCursor: true });
-
-    btn.on("pointerdown", () => {
-      console.log("clicked", direction);
-
-      changePage(direction);
-    });
-
-    return btn;
-  }
 
   function changePage(direction) {
     if (beveragesData.length === 0) return;
@@ -433,9 +549,9 @@ function create() {
   // DOWNLOAD BUTTONS
   // -------------------------------------------------
   const files = [
-    { label: ".png", file: "HappyBirthdayMocha2026.png" },
-    { label: ".csp", file: "HappyBirthdayMocha2026.csp" },
-    { label: ".psd", file: "HappyBirthdayMocha2026.psd" }
+    { label: ".png", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.png" },
+    { label: ".clip", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.clip" },
+    { label: ".psd", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.psd" }
   ];
 
   const buttonSpacingX = 90;
@@ -529,9 +645,9 @@ function create() {
     if (currentMenuIndex === -1) {
       nameText.setText("");
       creatorText.setText("");
-      descriptionText.setText("");
-      ingredientsText.setText("\n\n\nBase art by: @/taekaze7");
       flavorText.setText("");
+      ingredientsText.setText("\n\n\nBase art by: @/taekaze7");
+      notesText.setText("");
       beverageImage.setTexture(null);
       beverageImage.setScale(0);
       return;
@@ -546,19 +662,50 @@ function create() {
     if (discovered) {
       beverageImage.clearTint();
       nameText.setText(data.name);
+      nameText.setFontSize(40);
+      while (nameText.height > 90 && parseInt(nameText.style.fontSize) > 20) {
+        nameText.setFontSize(parseInt(nameText.style.fontSize) - 2);
+      }
+
       creatorText.setText("Creator: " + data.creator);
-      descriptionText.setText(data.description);
+      creatorText.setFontSize(24);
+      while (creatorText.height > 50 && parseInt(creatorText.style.fontSize) > 20) {
+        creatorText.setFontSize(parseInt(creatorText.style.fontSize) - 2);
+      }
+
+      flavorText.setText(data.description);
+      flavorText.setFontSize(24);
+      while (flavorText.height > 100 && parseInt(flavorText.style.fontSize) > 18) {
+        flavorText.setFontSize(parseInt(flavorText.style.fontSize) - 1);
+      }
+
       ingredientsTitle.setText("Ingredients");
       ingredientsText.setText(data.ingredients);
-      flavorTitle.setText("Creator Notes");
-      flavorText.setText(data.flavor);
+      ingredientsText.setFontSize(24);
+      while (ingredientsText.height > 200 && parseInt(ingredientsText.style.fontSize) > 18) {
+        ingredientsText.setFontSize(parseInt(ingredientsText.style.fontSize) - 2);
+      }
+
+      notesTitle.y = ingredientsText.y + ingredientsText.height + 30;
+      notesTitle.setText("Creator Notes");
+      notesText.y = notesTitle.y + 60;
+      notesText.setText(data.flavor);
+
+      const notesBottomLimit = PAGE_H / 2 - 30 + OFFSET_Y;
+      const availableNotesHeight = notesBottomLimit - notesText.y;
+
+      notesText.setFontSize(24);
+      while (notesText.height > availableNotesHeight && parseInt(notesText.style.fontSize) > 16) {
+        notesText.setFontSize(parseInt(notesText.style.fontSize) - 1);
+      }
+
     } else {
       beverageImage.setTint(0x000000);
       nameText.setText("???");
       creatorText.setText("Creator: ???");
-      descriptionText.setText("???");
-      ingredientsText.setText("???");
       flavorText.setText("???");
+      ingredientsText.setText("???");
+      notesText.setText("???");
     }
   }
 
