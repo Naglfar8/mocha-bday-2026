@@ -552,7 +552,7 @@ function create() {
   // -------------------------------------------------
   // DOWNLOAD BUTTONS
   // -------------------------------------------------
-const buttonY = 140;
+const buttonY = 170;
 
 const releaseBtn = scene.add.text(
   fullImage.x + 450,
@@ -616,7 +616,7 @@ popup.add(releaseBtn);
   }).setOrigin(0.5);
   popup.add(downloadsTitle);
 
-  const downloadsFooter = scene.add.text(fullImage.x + 450, fullImage.y + 190, "or get them from Rimane", {
+  const downloadsFooter = scene.add.text(fullImage.x + 450, fullImage.y + 220, "", {
     fontFamily: "Tahoma",
     fontSize: "20px",
     fontStyle: "italic",
