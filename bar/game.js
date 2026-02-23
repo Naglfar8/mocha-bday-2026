@@ -579,12 +579,7 @@ function create() {
       .setInteractive({ useHandCursor: true });
 
     btn.on("pointerdown", () => {
-      const link = document.createElement("a");
-      link.href = f.file;
-      link.rel = "noopener";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      window.open(f.file, "_blank", "noopener,noreferrer");
     });
 
     popup.add(btn);
