@@ -552,38 +552,36 @@ function create() {
   // -------------------------------------------------
   // DOWNLOAD BUTTONS
   // -------------------------------------------------
-  const files = [
-    { label: ".png", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.png" },
-    { label: ".clip", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.clip" },
-    { label: ".psd", file: "https://github.com/Naglfar8/mocha-bday-2026/releases/download/Files/HappyBdayMocha2026.psd" }
-  ];
+const buttonY = 140;
 
-  const buttonSpacingX = 90;
-  const buttonY = 140;
+const releaseBtn = scene.add.text(
+  fullImage.x + 450,
+  fullImage.y + buttonY,
+  "Github link to\nall downloads",
+  {
+    fontSize: "24px",
+    fontFamily: "Tahoma",
+    fontStyle: "bold",
+    color: "#ffffff",
+    stroke: "#000000",
+    strokeThickness: 3,
+    backgroundColor: "#75514a",
+    padding: { x: 16, y: 8 },
+    align: "center"
+  }
+)
+.setOrigin(0.5)
+.setInteractive({ useHandCursor: true });
 
-  const totalWidth = (files.length - 1) * buttonSpacingX;
-  const startX = fullImage.x + fullImage.displayWidth / 2 - totalWidth / 2 + 190;
+releaseBtn.on("pointerdown", () => {
+  window.open(
+    "https://github.com/Naglfar8/mocha-bday-2026/releases/tag/Files",
+    "_blank",
+    "noopener,noreferrer"
+  );
+});
 
-  files.forEach((f, i) => {
-    const btn = scene.add.text(startX + i * buttonSpacingX, fullImage.y + buttonY, f.label, {
-      fontSize: "24px",
-      fontFamily: "Tahoma",
-      fontStyle: "bold",
-      color: "#ffffff",
-      stroke: "#000000",
-      strokeThickness: 3,
-      backgroundColor: "#75514a",
-      padding: { x: 12, y: 6 },
-      align: "center"
-    }).setOrigin(0.5)
-      .setInteractive({ useHandCursor: true });
-
-    btn.on("pointerdown", () => {
-      window.open(f.file, "_blank", "noopener,noreferrer");
-    });
-
-    popup.add(btn);
-  });
+popup.add(releaseBtn);
 
   const downloadsHBD = scene.add.text(fullImage.x + 450, fullImage.y - 180, "Happy Birthday\nMocha!", {
     fontFamily: "Tahoma",
